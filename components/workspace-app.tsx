@@ -82,7 +82,7 @@ const persons = [
     initials: 'AK',
     name: 'Arjun Kumar',
     meta: 'Male · 34 years',
-    location: 'Bengaluru Urban',
+    location: 'Chennai',
     links: 4,
     risk: 'High relevance',
   },
@@ -92,7 +92,7 @@ const persons = [
     initials: 'PJ',
     name: 'Priya Joshi',
     meta: 'Female · 37 years',
-    location: 'Bengaluru Rural',
+    location: 'Chennai (Rural)',
     links: 3,
     risk: 'Person of interest',
   },
@@ -145,7 +145,7 @@ export default function WorkspaceApp({ onLogout }: { onLogout: () => void }) {
             <Fingerprint size={19} />
           </span>
           <span>
-            <strong>KURUHU</strong>
+            <strong>CRIME INTEL</strong>
             <small>Intelligence workspace</small>
           </span>
           <button className={styles.mobileClose} onClick={() => setSidebarOpen(false)} aria-label="Close navigation">
@@ -641,7 +641,7 @@ function AiPage({
           <textarea
             value={prompt}
             onChange={(event) => setPrompt(event.target.value)}
-            placeholder="Example: Find connections between FIR-2026-0187 and recent vehicle theft reports in Bengaluru…"
+            placeholder="Example: Find connections between FIR-2026-0187 and recent vehicle theft reports in Chennai…"
           />
           <footer>
             <span>Sources limited to your access</span>
@@ -720,7 +720,7 @@ function GraphPage({
   return (
     <>
       <PageHeading
-        eyebrow="KURUHU intelligence layer"
+        eyebrow="CRIME INTEL intelligence layer"
         title="Evidence graph"
         description="Explore verified relationships across people, FIRs, locations, vehicles, and evidence."
         action={
@@ -865,7 +865,7 @@ function SettingsPage({
             <span className={styles.largeAvatar}>SR</span>
             <div>
               <h2>{section}</h2>
-              <p>Shreya Rao · Lead investigator · Bengaluru Urban</p>
+              <p>Shreya Rao · Lead investigator · Chennai</p>
             </div>
             <button onClick={() => notify('Profile editing controls are now enabled.')}>Edit profile</button>
           </div>
@@ -890,7 +890,7 @@ function SettingsPage({
               <ShieldCheck size={20} />
               <div>
                 <strong>Session protected</strong>
-                <small>Last verified today at 18:42 · Bengaluru</small>
+                <small>Last verified today at 18:42 · Chennai</small>
               </div>
               <button onClick={() => notify('No unfamiliar sessions were found.')}>Review sessions</button>
             </div>

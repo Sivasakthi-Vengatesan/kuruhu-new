@@ -9,7 +9,7 @@ export function PageHeader({ title, description, actions, className }: { title: 
     'Person Intelligence': 'ವ್ಯಕ್ತಿ ಬುದ್ಧಿಮತ್ತೆ (Person Intelligence)',
     'FIR Directory': 'ಎಫ್‌ಐಆರ್ ಸೂಚಿಕೆ ಮತ್ತು ಪಟ್ಟಿ',
     'Evidence & Relationship Graph': 'ಸಾಕ್ಷ್ಯ ಮತ್ತು ಸಂಬಂಧಿತ ಜಾಲ (Entity Graph)',
-    'PRAMAAN AI Intelligence Hub': 'ಪ್ರಮಾಣ ಎಐ ಬುದ್ಧಿಮತ್ತೆ ಕೇಂದ್ರ',
+    'CRIME INTEL AI Intelligence Hub': 'ಕ್ರೈಮ್ ಇಂಟೆಲ್ ಎಐ ಬುದ್ಧಿಮತ್ತೆ ಕೇಂದ್ರ',
     'AI Intelligence & Graph Investigator': 'ಎಐ ತನಿಖಾ ಕನ್ಸೋಲ್',
     'Activity & Audit Trail': 'ಚಟುವಟಿಕೆ ಮತ್ತು ಆಡಿಟ್ ಪಟ್ಟಿ',
     'Notifications': 'ಸೂಚನೆಗಳು ಮತ್ತು ಮುನ್ನೆಚ್ಚರಿಕೆಗಳು',

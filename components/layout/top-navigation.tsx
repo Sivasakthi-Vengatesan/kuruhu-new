@@ -22,7 +22,7 @@ export function TopNavigation({ onMenuToggle }: TopNavigationProps) {
 
   const displayName = user?.display_name || 'Investigating Officer'
   const userRoleLabel = user?.role === 'admin' ? 'System Admin' : user?.role === 'civilian' ? 'Citizen' : 'Investigating Officer'
-  const userStation = user?.station || user?.district || 'Bengaluru'
+  const userStation = user?.station || user?.district || 'Chennai'
 
   const initials = displayName
     .split(' ')
@@ -46,7 +46,7 @@ export function TopNavigation({ onMenuToggle }: TopNavigationProps) {
       {/* Mobile Brand Emblem */}
       <Link href="/workspace/" className="flex items-center gap-2 lg:hidden shrink-0">
         <Image src="/ksp-emblem.png" alt="Karnataka State Police" width={28} height={34} className="object-contain" />
-        <span className="font-display text-sm font-bold tracking-wider text-navy hidden sm:inline">PRAMAAN</span>
+        <span className="font-display text-sm font-bold tracking-wider text-navy hidden sm:inline">CRIME INTEL</span>
       </Link>
 
       <div className="min-w-0 flex-1"><CommandSearch /></div>

@@ -51,12 +51,12 @@ export const TRANSLATIONS: Record<string, { en: string; kn: string }> = {
   'person.searchPlaceholder': { en: 'Name, alias, phone, identifier…', kn: 'ಹೆಸರು, ಅಲಿಯಾಸ್, ಫೋನ್, ಐಡಿ…' },
 
   // AI Hub
-  'ai.title': { en: 'PRAMAAN AI Intelligence Hub', kn: 'ಪ್ರಮಾಣ ಎಐ ಬುದ್ಧಿಮತ್ತೆ ಕೇಂದ್ರ' },
+  'ai.title': { en: 'CRIME INTEL AI Intelligence Hub', kn: 'ಕ್ರೈಮ್ ಇಂಟೆಲ್ ಎಐ ಬುದ್ಧಿಮತ್ತೆ ಕೇಂದ್ರ' },
   'ai.desc': { en: 'Crime Pattern Discovery, Spatial Hotspot Detection, Predictive Early Warnings & Proactive Crime Prevention.', kn: 'ಅಪರಾಧ ಶೈಲಿ ಪತ್ತೆ, ತಾಣಗಳ ನಕ್ಷೆ (Hotspots), ಪೂರ್ವಭಾವಿ ಮುನ್ನೆಚ್ಚರಿಕೆಗಳು & ಗಸ್ತು ಮಾರ್ಗಗಳು.' },
 
   // Settings
   'settings.langTitle': { en: 'Dashboard Platform Language', kn: 'ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ವ್ಯವಸ್ಥೆಯ ಭಾಷೆ' },
-  'settings.langDesc': { en: 'Toggle the entire KURUHU PRAMAAN workspace interface between English and Kannada.', kn: 'ಸಂಪೂರ್ಣ ಕುರುಹು ಪ್ರಮಾಣ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಸಂಪರ್ಕಸಾಧನವನ್ನು ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಕನ್ನಡದ ನಡುವೆ ಬದಲಾಯಿಸಿ.' },
+  'settings.langDesc': { en: 'Toggle the entire CRIME INTEL workspace interface between English and Kannada.', kn: 'ಸಂಪೂರ್ಣ ಕ್ರೈಮ್ ಇಂಟೆಲ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಸಂಪರ್ಕಸಾಧನವನ್ನು ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಕನ್ನಡದ ನಡುವೆ ಬದಲಾಯಿಸಿ.' },
 }
 
 type LanguageContextType = {

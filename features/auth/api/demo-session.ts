@@ -25,7 +25,7 @@ export const demoSession = {
       roles: ['investigation_officer'],
       permissions: ['fir:read', 'fir:create', 'fir:update', 'person:read', 'graph:read', 'ai:query', 'ai:verify', 'audit:read'],
       display_name: formattedName,
-      district: payload.district || 'Bengaluru (Urban)',
+      district: payload.district || 'Chennai',
       station: 'Jayanagar PS',
       badge_number: 'KSP-30412',
     }

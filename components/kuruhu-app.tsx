@@ -96,8 +96,8 @@ const SUMMARY_CARDS = [
 
 const FAQS = [
   {
-    q: 'What is KURUHU?',
-    a: 'KURUHU is a connected workspace for investigation and case management, bringing FIRs, person records, insights, and administration into one system.',
+    q: 'What is CRIME INTEL?',
+    a: 'CRIME INTEL is a connected workspace for investigation and case management, bringing FIRs, person records, insights, and administration into one system.',
   },
   { q: 'Who can access the workspace?', a: 'Access is limited to authorized personnel with role-based permissions.' },
   {
@@ -121,8 +121,8 @@ const FAQS = [
 ]
 
 const DISTRICTS = [
-  'Bengaluru (Urban)',
-  'Bengaluru (Rural)',
+  'Chennai',
+  'Chennai (Rural)',
   'Mysuru',
   'Belagavi',
   'Ballari',
@@ -277,7 +277,7 @@ export default function KuruhuApp() {
                 >
                   K
                 </div>
-                <span style={{ fontFamily: "'Manrope',sans-serif", fontWeight: 800, fontSize: 18 }}>KURUHU</span>
+                <span style={{ fontFamily: "'Manrope',sans-serif", fontWeight: 800, fontSize: 18 }}>CRIME INTEL</span>
               </div>
               <nav style={{ display: 'none', alignItems: 'center', gap: 28 }} className="kuruhu-desktop-nav">
                 {NAV_LINKS.map((l) => (
@@ -444,7 +444,7 @@ export default function KuruhuApp() {
                 Intelligent investigation. Connected information. Faster decisions.
               </h1>
               <p style={{ fontSize: 17, lineHeight: 1.6, color: COLORS.textMuted, margin: '0 0 28px', maxWidth: 520 }}>
-                KURUHU brings FIRs, person records, investigative insights, analytics, and secure administration into
+                CRIME INTEL brings FIRs, person records, investigative insights, analytics, and secure administration into
                 one connected workspace.
               </p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 24 }}>
@@ -655,7 +655,7 @@ export default function KuruhuApp() {
                   One connected workspace for the full investigation lifecycle
                 </h2>
                 <p style={{ fontSize: 15, lineHeight: 1.7, color: COLORS.textMuted, margin: '0 0 20px' }}>
-                  From first report to closed case, KURUHU keeps FIRs, people, insights and oversight in a single,
+                  From first report to closed case, CRIME INTEL keeps FIRs, people, insights and oversight in a single,
                   permission-aware system — so nothing is scattered across disconnected tools.
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -1004,7 +1004,7 @@ export default function KuruhuApp() {
                 textAlign: 'center',
               }}
             >
-              Why teams choose KURUHU
+              Why teams choose CRIME INTEL
             </h2>
             <div className="kuruhu-grid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 16 }}>
               {BENEFITS.map((b) => (
@@ -1194,7 +1194,7 @@ export default function KuruhuApp() {
                       background: `linear-gradient(135deg,${COLORS.green},${COLORS.greenDark})`,
                     }}
                   />
-                  <span style={{ fontFamily: "'Manrope',sans-serif", fontWeight: 800, fontSize: 15 }}>KURUHU</span>
+                  <span style={{ fontFamily: "'Manrope',sans-serif", fontWeight: 800, fontSize: 15 }}>CRIME INTEL</span>
                 </div>
                 <p style={{ fontSize: 13, color: '#64748b', lineHeight: 1.6, margin: 0 }}>
                   A connected investigation and case-management workspace.
@@ -1263,7 +1263,7 @@ export default function KuruhuApp() {
                 color: '#475569',
               }}
             >
-              © 2026 KURUHU. All rights reserved.
+              © 2026 CRIME INTEL. All rights reserved.
             </div>
           </footer>
         </div>
@@ -1322,7 +1322,7 @@ export default function KuruhuApp() {
                 color: '#fff',
               }}
             >
-              KURUHU
+              CRIME INTEL
             </h1>
 
             <div style={{ marginBottom: 20 }}>
@@ -1677,7 +1677,7 @@ export default function KuruhuApp() {
                 K
               </div>
               {!sidebarCollapsed && (
-                <span style={{ fontFamily: "'Manrope',sans-serif", fontWeight: 800, fontSize: 15 }}>KURUHU</span>
+                <span style={{ fontFamily: "'Manrope',sans-serif", fontWeight: 800, fontSize: 15 }}>CRIME INTEL</span>
               )}
             </div>
             <div

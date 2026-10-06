@@ -4,7 +4,7 @@ export default function PrivacyPage() {
   return (
     <PublicInfoPage eyebrow="Legal" title="Privacy policy">
       <p>
-        KURUHU limits access to authorised personnel and applies role-based controls to case, person, and investigative
+        CRIME INTEL limits access to authorised personnel and applies role-based controls to case, person, and investigative
         information.
       </p>
       <h2>Information handling</h2>

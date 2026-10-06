@@ -142,7 +142,7 @@ export function Sidebar({ mobileOpen = false, onClose }: SidebarProps) {
         <Link href="/workspace/" className="flex items-center gap-3 border-b border-white/10 px-5 py-5">
           <Image src="/ksp-emblem.png" alt="Karnataka State Police" width={36} height={43} className="object-contain" />
           <div>
-            <div className="text-base font-bold tracking-[0.18em] text-white">PRAMAAN</div>
+            <div className="text-base font-bold tracking-[0.18em] text-white">CRIME INTEL</div>
             <div className="text-[10px] uppercase tracking-wider text-slate-400">
               {language === 'kn' ? 'ಕರ್ನಾಟಕ ಪೊಲೀಸ್ ಪೋರ್ಟಲ್' : role === 'admin' ? 'Admin Governance' : role === 'civilian' ? 'Citizen Portal' : 'Police Intelligence'}
             </div>
@@ -177,7 +177,7 @@ export function Sidebar({ mobileOpen = false, onClose }: SidebarProps) {
             <Link href="/workspace/" onClick={onClose} className="flex items-center gap-3">
               <Image src="/ksp-emblem.png" alt="Karnataka State Police" width={32} height={38} className="object-contain" />
               <div>
-                <div className="text-base font-bold tracking-[0.18em] text-white">PRAMAAN</div>
+                <div className="text-base font-bold tracking-[0.18em] text-white">CRIME INTEL</div>
                 <div className="text-[10px] uppercase tracking-wider text-slate-400">
                   {language === 'kn' ? 'ಕರ್ನಾಟಕ ಪೊಲೀಸ್ ಪೋರ್ಟಲ್' : role === 'admin' ? 'Admin Governance' : role === 'civilian' ? 'Citizen Portal' : 'Police Intelligence'}
                 </div>

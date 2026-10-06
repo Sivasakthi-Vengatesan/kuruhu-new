@@ -1,1 +1,2 @@
-export const APPLICATION = { name: 'PRAMAAN', tagline: 'Evidence • Intelligence • Justice', organization: 'Karnataka State Police – State Crime Records Bureau' } as const
+export const APPLICATION = { name: 'CRIME INTEL', tagline: 'Evidence • Intelligence • Justice', organization: 'Karnataka State Police – State Crime Records Bureau' } as const
+

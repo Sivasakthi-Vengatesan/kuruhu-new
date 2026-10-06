@@ -2,7 +2,7 @@ import PublicInfoPage from '@/components/public-info-page'
 
 export default function SupportPage() {
   return (
-    <PublicInfoPage eyebrow="Help centre" title="KURUHU support">
+    <PublicInfoPage eyebrow="Help centre" title="CRIME INTEL support">
       <p>
         For account access, workflow, or permissions assistance, contact your workspace administrator or departmental
         technical support team.

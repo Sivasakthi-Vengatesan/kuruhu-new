@@ -4,7 +4,7 @@ export default function TermsPage() {
   return (
     <PublicInfoPage eyebrow="Legal" title="Terms and conditions">
       <p>
-        Use of KURUHU is restricted to authorised users performing approved duties. Your assigned role determines which
+        Use of CRIME INTEL is restricted to authorised users performing approved duties. Your assigned role determines which
         modules, records, and actions are available.
       </p>
       <h2>Acceptable use</h2>

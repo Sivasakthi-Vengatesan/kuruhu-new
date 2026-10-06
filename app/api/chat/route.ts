@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-const SYSTEM_PROMPT = `You are PRAMAAN AI — an advanced intelligence assistant embedded in the KURUHU (ಪ್ರಮಾಣ) police investigation & crime analytics platform used by the Karnataka State Police.
+const SYSTEM_PROMPT = `You are PRAMAAN AI — an advanced intelligence assistant embedded in the CRIME INTEL (ಪ್ರಮಾಣ) police investigation & crime analytics platform used by the Karnataka State Police.
 
 Always provide clear, thorough, authoritative, and actionable police intelligence outputs specific to the user's prompt. Do NOT return generic text. Answer the exact question asked with:
 1. Direct response to the prompt
@@ -20,7 +20,7 @@ function generateFineTunedIntelligenceReply(query: string, isKn: boolean, page: 
     if (isKn) {
       return `**ವಾಹನ ಸಂಶೋಧನಾ ವರದಿ (PRAMAAN AI)**:\n\n• **ವಾಹನ ನೋಂದಣಿ**: Black Hyundai Verna (**KA-05-NB-8821**).\n• **ಸಂಬಂಧಿತ ಪ್ರಕರಣಗಳು**: ಹೌದು ಸಾಬ್! ಈ ವಾಹನವು 48 ಗಂಟೆಗಳಲ್ಲಿ 2 ಪ್ರಮುಖ ಪ್ರಕರಣಗಳಲ್ಲಿ ಪತ್ತೆಯಾಗಿದೆ:\n  1. **FIR 0042/2026** (ಮಡಿವಾಳ) - ರಾತ್ರಿ ದ್ವಿಚಕ್ರ ವಾಹನ ಮತ್ತು ಸರಗಳ್ಳತನ.\n  2. **FIR 0039/2026** (ಶಿವಾಜಿನಗರ) - ವಾಣಿಜ್ಯ ಮಳಿಗೆ ಕಳ್ಳತನ.\n• **ಸಂಪರ್ಕಿತ ಶಂಕಿತರು**: ವಾಹನ ಮಾಲೀಕ ಫೈಸಲ್ ಅಹಮದ್ (P-1002), ರವಿ ಕುಮಾರ್ ಎಸ್ (P-1001) ಅವರ ನಿಕಟ ಸಹಚರ.\n• **ಸಕ್ರಿಯ ಕ್ರಮ**: ಎಎನ್‌ಪಿಆರ್ (ANPR) ಕ್ಯಾಮೆರಾಗಳಲ್ಲಿ ಈ ವಾಹನವನ್ನು ರೆಡ್ ಫ್ಲ್ಯಾಗ್ ಮಾಡಲಾಗಿದೆ.`
     }
-    return `**Vehicle Intelligence Match (PRAMAAN AI)**:\n\n• **Vehicle**: Black Hyundai Verna (Registration **KA-05-NB-8821**).\n• **Multi-Case Cross Correlation**: Yes, this vehicle appears in **2 active open cases**:\n  1. **FIR 0042/2026** (Madiwala PS): Identified on CCTV departing scene at 02:14 AM.\n  2. **FIR 0039/2026** (Shivajinagar PS): Captured on ANPR camera 45 minutes after commercial break-in.\n• **Suspect Correlation**: Registered to **Faisal Ahmed (P-1002)**, co-conspirator linked with **Ravi Kumar S (P-1001)**.\n• **Recommended Action**: Issue immediate impound alert to Bengaluru South patrol units and checkposts.`
+    return `**Vehicle Intelligence Match (PRAMAAN AI)**:\n\n• **Vehicle**: Black Hyundai Verna (Registration **KA-05-NB-8821**).\n• **Multi-Case Cross Correlation**: Yes, this vehicle appears in **2 active open cases**:\n  1. **FIR 0042/2026** (Madiwala PS): Identified on CCTV departing scene at 02:14 AM.\n  2. **FIR 0039/2026** (Shivajinagar PS): Captured on ANPR camera 45 minutes after commercial break-in.\n• **Suspect Correlation**: Registered to **Faisal Ahmed (P-1002)**, co-conspirator linked with **Ravi Kumar S (P-1001)**.\n• **Recommended Action**: Issue immediate impound alert to Chennai South patrol units and checkposts.`
   }
 
   // Case 2: Are Jayanagar burglary & bank fraud connected?
@@ -31,12 +31,12 @@ function generateFineTunedIntelligenceReply(query: string, isKn: boolean, page: 
     return `**Case Correlation Intelligence (PRAMAAN AI)**:\n\n• **Connection Analysis**: Yes, evidence indicates **FIR 0031/2026** (Jayanagar Burglary) and **FIR 0018/2026** (Bank Cyber Fraud) are **linked (92% Confidence)**.\n• **Key Linkages**: \n  1. **Common Suspect**: Call Detail Records (CDR) place **Suresh Gowda (P-1003)** at both crime perimeters.\n  2. **Financial Trail**: Stolen funds (£4.5 Lakhs) were laundered through fraudulent bank accounts established via stolen identity credentials.\n• **Recommended Action**: Consolidate evidence trails into a unified syndicate charge-sheet.`
   }
 
-  // Case 3: Repeat offenders in Bengaluru South
-  if ((q.includes('repeat') || q.includes('offender') || q.includes('recidivism')) && (q.includes('bengaluru') || q.includes('south') || q.includes('theft'))) {
+  // Case 3: Repeat offenders in Chennai South
+  if ((q.includes('repeat') || q.includes('offender') || q.includes('recidivism')) && (q.includes('chennai') || q.includes('bengaluru') || q.includes('south') || q.includes('theft'))) {
     if (isKn) {
-      return `**ಪುನರಾವರ್ತಿತ ಅಪರಾಧಿಗಳ ಪಟ್ಟಿ - ಬೆಂಗಳೂರು ದಕ್ಷಿಣ (PRAMAAN AI)**:\n\n• **ರವಿ ಕುಮಾರ್ ಎಸ್ (P-1001)** — ಮರುಕಳಿಸುವ ಅಂಕ: **84%** (3 ಆಸ್ತಿ ಕಳ್ಳತನ ಪ್ರಕರಣಗಳು, ಮಡಿವಾಳ/ಬಿಟಿಎಂ).\n• **ಫೈಸಲ್ ಅಹಮದ್ (P-1002)** — ಮರುಕಳಿಸುವ ಅಂಕ: **78%** (ವಾಹನ ಕಳ್ಳತನ ಸಿಂಡಿಕೇಟ್).\n• **ಸುರೇಶ್ ಗೌಡ (P-1003)** — ಮರುಕಳಿಸುವ ಅಂಕ: **72%** (ಸರಗಳ್ಳತನ ಮತ್ತು ಸೈಬರ್ ವಂಚನೆ).\n• **ಕಾನೂನು ಕ್ರಮ**: BNSS / CrPC Section 107/110 ಅಡಿಯಲ್ಲಿ ಬಾಂಡ್ ಜಾರಿಗೆ ತಕ್ಷಣದ ಕ್ರಮ.`
+      return `**ಪುನರಾವರ್ತಿತ ಅಪರಾಧಿಗಳ ಪಟ್ಟಿ - ಚೆನ್ನೈ ದಕ್ಷಿಣ (PRAMAAN AI)**:\n\n• **ರವಿ ಕುಮಾರ್ ಎಸ್ (P-1001)** — ಮರುಕಳಿಸುವ ಅಂಕ: **84%** (3 ಆಸ್ತಿ ಕಳ್ಳತನ ಪ್ರಕರಣಗಳು, ಮಡಿವಾಳ/ಬಿಟಿಎಂ).\n• **ಫೈಸಲ್ ಅಹಮದ್ (P-1002)** — ಮರುಕಳಿಸುವ ಅಂಕ: **78%** (ವಾಹನ ಕಳ್ಳತನ ಸಿಂಡಿಕೇಟ್).\n• **ಸುರೇಶ್ ಗೌಡ (P-1003)** — ಮರುಕಳಿಸುವ ಅಂಕ: **72%** (ಸರಗಳ್ಳತನ ಮತ್ತು ಸೈಬರ್ ವಂಚನೆ).\n• **ಕಾನೂನು ಕ್ರಮ**: BNSS / CrPC Section 107/110 ಅಡಿಯಲ್ಲಿ ಬಾಂಡ್ ಜಾರಿಗೆ ತಕ್ಷಣದ ಕ್ರಮ.`
     }
-    return `**Repeat Offender Profile & Recidivism Index — Bengaluru South (PRAMAAN AI)**:\n\n• **Ravi Kumar S (P-1001)** — Recidivism Score: **84%** (Linked to 3 active theft FIRs in Madiwala/BTM).\n• **Faisal Ahmed (P-1002)** — Recidivism Score: **78%** (Automobile theft syndicate organizer).\n• **Suresh Gowda (P-1003)** — Recidivism Score: **72%** (Chain snatching & identity fraud recidivist).\n• **Recommended Action**: Initiate mandatory Section 107/110 BNSS preventative bond proceedings.`
+    return `**Repeat Offender Profile & Recidivism Index — Chennai South (PRAMAAN AI)**:\n\n• **Ravi Kumar S (P-1001)** — Recidivism Score: **84%** (Linked to 3 active theft FIRs in Madiwala/BTM).\n• **Faisal Ahmed (P-1002)** — Recidivism Score: **78%** (Automobile theft syndicate organizer).\n• **Suresh Gowda (P-1003)** — Recidivism Score: **72%** (Chain snatching & identity fraud recidivist).\n• **Recommended Action**: Initiate mandatory Section 107/110 BNSS preventative bond proceedings.`
   }
 
   // Case 4: Peak crime window for Madiwala Market
@@ -50,9 +50,9 @@ function generateFineTunedIntelligenceReply(query: string, isKn: boolean, page: 
   // Case 5: Greetings
   if (/^(hi|hello|hey|namaste|greetings|good morning|good afternoon|good evening|ನಮಸ್ಕಾರ|ಶುಭೋದಯ)/i.test(q) || q.length <= 3) {
     if (isKn) {
-      return `ನಮಸ್ಕಾರ ಸಾಬ್! **ಪ್ರಮಾಣ ಎಐ (PRAMAAN AI)** ತನಿಖಾ ಸಹಾಯಕ ಸಕ್ರಿಯವಾಗಿದೆ.\n\n• **ಸಕ್ರಿಯ ದತ್ತಾಂಶ**: 55 ಎಫ್‌ಐಆರ್‌ಗಳು, 14 ಶಂಕಿತರು, 5 ಗಸ್ತು ಮಾರ್ಗಗಳು ಸಿದ್ಧವಾಗಿವೆ.\n• **ನೀವು ಕೇಳಬಹುದಾದ ಪ್ರಶ್ನೆಗಳು**:\n  - "ಮಡಿವಾಳ ಮಾರುಕಟ್ಟೆಯ ಗರಿಷ್ಠ ಅಪರಾಧ ಸಮಯ ಯಾವುದು?"\n  - "ಬೆಂಗಳೂರು ದಕ್ಷಿಣದ ಮರುಕಳಿಸುವ ಅಪರಾಧಿಗಳ ಪಟ್ಟಿ ತೋರಿಸಿ"\n  - "ವಾಹನ KA-05-NB-8821 ಇತರ ಪ್ರಕರಣಗಳಲ್ಲಿದೆಯೇ?"`
+      return `ನಮಸ್ಕಾರ ಸಾಬ್! **ಪ್ರಮಾಣ ಎಐ (PRAMAAN AI)** ತನಿಖಾ ಸಹಾಯಕ ಸಕ್ರಿಯವಾಗಿದೆ.\n\n• **ಸಕ್ರಿಯ ದತ್ತಾಂಶ**: 55 ಎಫ್‌ಐಆರ್‌ಗಳು, 14 ಶಂಕಿತರು, 5 ಗಸ್ತು ಮಾರ್ಗಗಳು ಸಿದ್ಧವಾಗಿವೆ.\n• **ನೀವು ಕೇಳಬಹುದಾದ ಪ್ರಶ್ನೆಗಳು**:\n  - "ಮಡಿವಾಳ ಮಾರುಕಟ್ಟೆಯ ಗರಿಷ್ಠ ಅಪರಾಧ ಸಮಯ ಯಾವುದು?"\n  - "ಚೆನ್ನೈ ದಕ್ಷಿಣದ ಮರುಕಳಿಸುವ ಅಪರಾಧಿಗಳ ಪಟ್ಟಿ ತೋರಿಸಿ"\n  - "ವಾಹನ KA-05-NB-8821 ಇತರ ಪ್ರಕರಣಗಳಲ್ಲಿದೆಯೇ?"`
     }
-    return `Namaste Officer! I am **PRAMAAN AI** — Karnataka State Police Intelligence Assistant.\n\n• **Indexed Database**: 55 Active FIRs, 14 Profiled Suspects, 5 Spatial Hotspots & Patrol Corridors.\n• **Suggested Queries You Can Ask Me**:\n  1. *"What is the peak crime window for Madiwala Market?"*\n  2. *"Show repeat offenders linked to theft cases in Bengaluru South"*\n  3. *"Does vehicle KA-05-NB-8821 appear in other open cases?"*\n  4. *"Are the Jayanagar burglary and bank fraud cases connected?"*`
+    return `Namaste Officer! I am **PRAMAAN AI** — Karnataka State Police Intelligence Assistant.\n\n• **Indexed Database**: 55 Active FIRs, 14 Profiled Suspects, 5 Spatial Hotspots & Patrol Corridors.\n• **Suggested Queries You Can Ask Me**:\n  1. *"What is the peak crime window for Madiwala Market?"*\n  2. *"Show repeat offenders linked to theft cases in Chennai South"*\n  3. *"Does vehicle KA-05-NB-8821 appear in other open cases?"*\n  4. *"Are the Jayanagar burglary and bank fraud cases connected?"*`
   }
 
   if (isKn) {

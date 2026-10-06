@@ -35,14 +35,14 @@ type Message = {
 }
 
 const QUICK_PROMPTS_EN = [
-  'Show crime hotspots in Bengaluru',
+  'Show crime hotspots in Chennai',
   'Analyze repeat offenders & MO pattern',
   'Generate proactive patrol route',
   'Explain AI audit trail for FIR-0042',
 ]
 
 const QUICK_PROMPTS_KN = [
-  'ಬೆಂಗಳೂರಿನ ಅಪರಾಧ ತಾಣಗಳ ಪಟ್ಟಿ ತೋರಿಸಿ',
+  'ಚೆನ್ನೈನ ಅಪರಾಧ ತಾಣಗಳ ಪಟ್ಟಿ ತೋರಿಸಿ',
   'ಮರುಕಳಿಸುವ ಅಪರಾಧಿಗಳ ವಿಶ್ಲೇಷಣೆ ಮಾಡಿ',
   'ಪೂರ್ವಭಾವಿ ಗಸ್ತು ಮಾರ್ಗ ರಚಿಸಿ',
   'ಎಐ ಪರಿಶೋಧನೆಯ ವಿವರಣೆ ಕೊಡಿ',
@@ -61,7 +61,7 @@ export function AiChatbot() {
       id: 'welcome',
       role: 'assistant',
       content:
-        'Namaste Officer! I am **PRAMAAN AI** — your crime analytics & investigation assistant. I provide real-time crime pattern discovery, criminal network analysis, predictive hotspot intelligence, and explainable AI insights in both **English & ಕನ್ನಡ**.\n\nHow may I assist your investigation today?',
+        'Namaste Officer! I am **CRIME INTEL AI** — your crime analytics & investigation assistant. I provide real-time crime pattern discovery, criminal network analysis, predictive hotspot intelligence, and explainable AI insights in both **English & ಕನ್ನಡ**.\n\nHow may I assist your investigation today?',
     },
   ])
 
@@ -251,7 +251,7 @@ export function AiChatbot() {
       <!DOCTYPE html>
       <html>
       <head>
-        <title>PRAMAAN SCRB Intelligence Report</title>
+        <title>CRIME INTEL SCRB Intelligence Report</title>
         <style>
           body { font-family: 'Segoe UI', Arial, sans-serif; margin: 40px; color: #0f172a; line-height: 1.6; }
           .header { border-bottom: 2px solid #0f172a; padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
@@ -272,7 +272,7 @@ export function AiChatbot() {
         <div class="header">
           <div>
             <div class="title">KARNATAKA STATE POLICE — SCRB</div>
-            <div class="subtitle">PRAMAAN AI Conversation & Audit Briefing Report</div>
+            <div class="subtitle">CRIME INTEL AI Conversation & Audit Briefing Report</div>
           </div>
           <div style="text-align: right; font-size: 11px; color: #475569;">
             CONFIDENTIAL / LAW ENFORCEMENT ONLY
@@ -294,7 +294,7 @@ export function AiChatbot() {
           </tr>
           <tr>
             <td class="label">AI Engine:</td>
-            <td>PRAMAAN AI Engine</td>
+            <td>CRIME INTEL AI Engine</td>
             <td class="label">Security Level:</td>
             <td>Role-Based Access Controlled</td>
           </tr>
@@ -306,7 +306,7 @@ export function AiChatbot() {
         .map(
           m => `
             <div class="msg ${m.role === 'user' ? 'user-msg' : 'ai-msg'}">
-              <div class="msg-sender">${m.role === 'user' ? officerName : 'PRAMAAN AI ASSISTANT'}</div>
+              <div class="msg-sender">${m.role === 'user' ? officerName : 'CRIME INTEL AI ASSISTANT'}</div>
               <div>${m.content.replace(/\n/g, '<br/>')}</div>
             </div>
           `
@@ -370,7 +370,7 @@ export function AiChatbot() {
               id: Date.now().toString(),
               role: 'assistant',
               content: data.reply,
-              modelUsed: data.modelUsed || 'PRAMAAN Spring Boot RAG Engine',
+              modelUsed: data.modelUsed || 'CRIME INTEL Spring Boot RAG Engine',
               confidence: data.confidence || 0.98,
               auditHash: data.auditHash || `AUDIT-SPRING-${Math.floor(100000 + Math.random() * 900000)}`,
             },
@@ -399,7 +399,7 @@ export function AiChatbot() {
               id: Date.now().toString(),
               role: 'assistant',
               content: data.reply,
-              modelUsed: data.modelUsed || 'PRAMAAN AI (Groq LLaMA 3.3 70B)',
+              modelUsed: data.modelUsed || 'CRIME INTEL AI (Groq LLaMA 3.3 70B)',
               confidence: data.confidence || 0.98,
               auditHash: data.auditHash || `AUDIT-GROQ-${Math.floor(100000 + Math.random() * 900000)}`,
             },
@@ -416,7 +416,7 @@ export function AiChatbot() {
     const groqApiKey = process.env.NEXT_PUBLIC_GROQ_API_KEY || ''
     if (groqApiKey) {
       try {
-        const systemPrompt = `You are PRAMAAN AI — an advanced intelligence assistant embedded in the KURUHU (ಪ್ರಮಾಣ) police investigation & crime analytics platform used by the Karnataka State Police. Always provide clear, thorough, authoritative, and actionable police intelligence outputs specific to the user's prompt. Support both English and Kannada (ಕನ್ನಡ).`
+        const systemPrompt = `You are CRIME INTEL AI — an advanced intelligence assistant embedded in the CRIME INTEL police investigation & crime analytics platform used by the Karnataka State Police. Always provide clear, thorough, authoritative, and actionable police intelligence outputs specific to the user's prompt. Support both English and Kannada (ಕನ್ನಡ).`
         const contextPrompt = `[ACTIVE USER CONTEXT: Page="${pathname}", Role="${user?.role || 'Police Officer'}", Language="${lang === 'kn' ? 'Kannada' : 'English'}"]`
 
         const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
@@ -446,7 +446,7 @@ export function AiChatbot() {
                 id: Date.now().toString(),
                 role: 'assistant',
                 content: reply,
-                modelUsed: 'PRAMAAN AI (Groq LLaMA 3.3 70B)',
+                modelUsed: 'CRIME INTEL AI (Groq LLaMA 3.3 70B)',
                 confidence: 0.98,
                 auditHash: `AUDIT-GROQ-${Math.floor(100000 + Math.random() * 900000)}`,
               },
@@ -460,11 +460,11 @@ export function AiChatbot() {
       }
     }
 
-    // 4. Fallback to built-in PRAMAAN NLU engine
+    // 4. Fallback to built-in CRIME INTEL NLU engine
     const isKn = lang === 'kn' || /[\u0C80-\u0CFF]/.test(content)
-    let fallbackReply = `**PRAMAAN AI Intelligence Briefing**:\n\n• **Target Query**: "${content}"\n• **Database Search**: Cross-referenced Supabase FIR Master DB, Suspect Profiles, and CCTV Logs.\n• **Analysis Finding**: Identified matching FIR records and suspect nodes in Bengaluru South.\n• **Recommended Action**: Access FIR Directory or Evidence Graph for full citation logs.`
+    let fallbackReply = `**CRIME INTEL AI Intelligence Briefing**:\n\n• **Target Query**: "${content}"\n• **Database Search**: Cross-referenced Supabase FIR Master DB, Suspect Profiles, and CCTV Logs.\n• **Analysis Finding**: Identified matching FIR records and suspect nodes in Chennai South.\n• **Recommended Action**: Access FIR Directory or Evidence Graph for full citation logs.`
     if (isKn) {
-      fallbackReply = `**ಪ್ರಮಾಣ ಎಐ ತನಿಖಾ ವರದಿ (PRAMAAN AI)**:\n\n• **ಪ್ರಶ್ನೆ**: "${content}"\n• **ವಿಶ್ಲೇಷಣೆ**: ಕೆಎಸ್‌ಪಿ ಸುಪ್ರಾಬೇಸ್ ದತ್ತಾಂಶ ಮತ್ತು ಸಾಕ್ಷ್ಯ ಜಾಲ (Entity Graph) ಪರಿಶೀಲಿಸಲಾಗಿದೆ.\n• **ಫಲಿತಾಂಶ**: ಪ್ರಶ್ನೆಗೆ ಸಂಬಂಧಿಸಿದ ಎಫ್‌ಐಆರ್ ದಾಖಲೆಗಳು ಮತ್ತು ಶಂಕಿತರ ಪಟ್ಟಿ ಲಭ್ಯವಿದೆ.\n• **ಶಿಫಾರಸು**: ಹೆಚ್ಚಿನ ವಿವರಗಳಿಗೆ ಎಫ್‌ಐಆರ್ ಸೂಚಿಕೆ ಅಥವಾ ಸಾಕ್ಷ್ಯ ಜಾಲ ಪರಿಶೀಲಿಸಿ സാಬ್.`
+      fallbackReply = `**ಕ್ರೈಮ್ ಇಂಟೆಲ್ ಎಐ ತನಿಖಾ ವರದಿ (CRIME INTEL AI)**:\n\n• **ಪ್ರಶ್ನೆ**: "${content}"\n• **ವಿಶ್ಲೇಷಣೆ**: ಕೆಎಸ್‌ಪಿ ಸುಪ್ರಾಬೇಸ್ ದತ್ತಾಂಶ ಮತ್ತು ಸಾಕ್ಷ್ಯ ಜಾಲ (Entity Graph) ಪರಿಶೀಲಿಸಲಾಗಿದೆ.\n• **ಫಲಿತಾಂಶ**: ಪ್ರಶ್ನೆಗೆ ಸಂಬಂಧಿಸಿದ ಎಫ್‌ಐಆರ್ ದಾಖಲೆಗಳು ಮತ್ತು ಶಂಕಿತರ ಪಟ್ಟಿ ಲಭ್ಯವಿದೆ.\n• **ಶಿಫಾರಸು**: ಹೆಚ್ಚಿನ ವಿವರಗಳಿಗೆ ಎಫ್‌ಐಆರ್ ಸೂಚಿಕೆ ಅಥವಾ ಸಾಕ್ಷ್ಯ ಜಾಲ ಪರಿಶೀಲಿಸಿ ಸಾಬ್.`
     }
 
     setMessages(prev => [
@@ -473,7 +473,7 @@ export function AiChatbot() {
         id: Date.now().toString(),
         role: 'assistant',
         content: fallbackReply,
-        modelUsed: 'PRAMAAN AI Local Engine',
+        modelUsed: 'CRIME INTEL AI Local Engine',
         confidence: 0.94,
         auditHash: `AUDIT-PRM-${Math.floor(100000 + Math.random() * 900000)}`,
       },
@@ -526,7 +526,7 @@ export function AiChatbot() {
             : 'pointer-events-none h-[560px] w-[400px] opacity-0 translate-y-4'
         )}
         role="dialog"
-        aria-label="PRAMAAN AI Assistant"
+        aria-label="CRIME INTEL AI Assistant"
       >
         {/* Header */}
         <div className="flex items-center gap-3 border-b border-white/10 bg-navy px-4 py-3.5 text-white">
@@ -535,7 +535,7 @@ export function AiChatbot() {
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
-              <p className="text-sm font-bold text-white leading-none">PRAMAAN AI</p>
+              <p className="text-sm font-bold text-white leading-none">CRIME INTEL AI</p>
               <span className="rounded bg-cyan/20 px-1.5 py-0.5 text-[9px] font-bold text-cyan uppercase">Intelligence</span>
             </div>
             <p className="mt-0.5 text-[10px] text-slate-300 truncate">
@@ -642,13 +642,13 @@ export function AiChatbot() {
                     <div className="mt-2 rounded-lg bg-surface p-2.5 text-[10px] space-y-1 border border-line">
                       <p className="font-bold text-navy uppercase">Explainable AI Audit Record</p>
                       <p>
-                        <span className="text-slate-500">Model Engine:</span> {msg.modelUsed || 'PRAMAAN Intelligence Engine'}
+                        <span className="text-slate-500">Model Engine:</span> {msg.modelUsed || 'CRIME INTEL Intelligence Engine'}
                       </p>
                       <p>
                         <span className="text-slate-500">Audit Hash:</span> <code>{msg.auditHash}</code>
                       </p>
                       <p>
-                        <span className="text-slate-500">Sources Searched:</span> KSP Supabase DB, Entity Graph, PRAMAAN AI
+                        <span className="text-slate-500">Sources Searched:</span> KSP Supabase DB, Entity Graph, CRIME INTEL AI
                       </p>
                     </div>
                   )}
@@ -667,7 +667,7 @@ export function AiChatbot() {
                 <span className="size-1.5 rounded-full bg-cyan animate-bounce [animation-delay:-0.3s]" />
                 <span className="size-1.5 rounded-full bg-cyan animate-bounce [animation-delay:-0.15s]" />
                 <span className="size-1.5 rounded-full bg-cyan animate-bounce" />
-                <span className="ml-2 text-[11px] font-semibold text-slate-500">PRAMAAN AI synthesizing response…</span>
+                <span className="ml-2 text-[11px] font-semibold text-slate-500">CRIME INTEL AI synthesizing response…</span>
               </div>
             </div>
           )}
@@ -747,7 +747,7 @@ export function AiChatbot() {
           </div>
 
           <div className="mt-1.5 flex items-center justify-between text-[10px] text-slate-400">
-            <span>Powered by PRAMAAN AI Engine</span>
+            <span>Powered by CRIME INTEL AI Engine</span>
             <span className="font-semibold text-slate-500">English + ಕನ್ನಡ</span>
           </div>
         </div>

@@ -5,8 +5,8 @@ import { AppProviders } from '@/components/providers/app-providers'
 
 export const metadata: Metadata = {
   title: {
-    default: 'KURUHU',
-    template: '%s | KURUHU',
+    default: 'CRIME INTEL',
+    template: '%s | CRIME INTEL',
   },
   description: 'A connected investigation and case-management workspace.',
   icons: {

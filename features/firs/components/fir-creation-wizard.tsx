@@ -43,7 +43,7 @@ type Draft = {
 
 const EMPTY: Draft = {
   offenceType: '', incidentDate: '', incidentTime: '', narrative: '',
-  location: '', area: '', district: 'Bengaluru City', station: '',
+  location: '', area: '', district: 'Chennai', station: '',
   complainantName: '', complainantPhone: '', complainantAddress: '',
   persons: [], evidence: [], sections: [], officer: '', priority: 'medium',
 }

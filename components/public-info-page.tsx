@@ -31,7 +31,7 @@ export default function PublicInfoPage({
         }}
       >
         <Link href="/" style={{ color: '#D6AD3F', textDecoration: 'none', fontSize: 13 }}>
-          ← Back to KURUHU
+          ← Back to CRIME INTEL
         </Link>
         <p
           style={{

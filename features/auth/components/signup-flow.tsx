@@ -53,7 +53,7 @@ export function SignupFlow() {
       <aside className="relative hidden w-[420px] shrink-0 flex-col justify-between overflow-hidden bg-navy p-10 lg:flex">
         <Link href="/" className="relative flex items-center gap-3">
           <Image src="/ksp-emblem.png" alt="Karnataka State Police" width={34} height={41} className="object-contain" />
-          <span className="text-sm font-bold tracking-[0.22em] text-white">KURUHU</span>
+          <span className="text-sm font-bold tracking-[0.22em] text-white">CRIME INTEL</span>
         </Link>
         <div>
           <h1 className="text-3xl font-bold leading-tight text-white">Create your secure investigation account.</h1>

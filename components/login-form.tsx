@@ -8,8 +8,8 @@ import { ChevronDown, CheckCircle2, ShieldCheck, User, ShieldAlert, KeyRound, Bu
 import { cn } from '@/lib/utils'
 
 const DISTRICTS = [
-  'Bengaluru (Urban)',
-  'Bengaluru (Rural)',
+  'Chennai',
+  'Chennai (Rural)',
   'Mysuru',
   'Belagavi',
   'Ballari',
@@ -40,7 +40,7 @@ export function LoginForm() {
     name: '',
     identifier: '',
     credential: '',
-    district: 'Bengaluru (Urban)',
+    district: 'Chennai',
     agreed: true,
   })
 
@@ -81,7 +81,7 @@ export function LoginForm() {
           <CheckCircle2 className="size-10" />
         </div>
         <h3 className="mt-4 text-lg font-bold text-white">Authentication Successful</h3>
-        <p className="mt-1 text-xs text-blue-200/70">Redirecting to PRAMAAN Intelligence Workspace...</p>
+        <p className="mt-1 text-xs text-blue-200/70">Redirecting to CRIME INTEL Intelligence Workspace...</p>
       </div>
     )
   }

@@ -36,7 +36,7 @@ export function DashboardHeader() {
 
   const displayName = user?.display_name || (language === 'kn' ? 'ತನಿಖಾಧಿಕಾರಿ ಸಾಬ್' : 'Investigating Officer')
   const userStation = user?.station || 'Jayanagar PS'
-  const userDistrict = user?.district || 'Bengaluru (Urban)'
+  const userDistrict = user?.district || 'Chennai'
 
   return (
     <div className="mb-6 flex flex-wrap items-end justify-between gap-4">

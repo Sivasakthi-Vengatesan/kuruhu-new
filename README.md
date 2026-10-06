@@ -1,10 +1,10 @@
-# PRAMAAN (ಪ್ರಮಾಣ) — Kuruhu Crime Investigation Platform
+# CRIME INTEL — Crime Investigation Platform
 
 > **Evidence • Intelligence • Justice**  
 > State Crime Records Bureau (SCRB) — Karnataka State Police  
 > **Enterprise Java Architecture Demo & Spring Boot Backend Scaffold**
 
-Kuruhu (PRAMAAN) is a police intelligence and criminal investigation application architecture featuring a comprehensive **Java Spring Boot 3** backend scaffold (constituting **~78% of the source-code footprint**) paired with the intact, preserved **Next.js 16 (React 19)** visual frontend demo application.
+CRIME INTEL is a police intelligence and criminal investigation application architecture featuring a comprehensive **Java Spring Boot 3** backend scaffold (constituting **~78% of the source-code footprint**) paired with the intact, preserved **Next.js 16 (React 19)** visual frontend demo application.
 
 ---
 

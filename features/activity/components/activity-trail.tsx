@@ -32,7 +32,7 @@ export function ActivityTrail() {
     <>
       <PageHeader
         title="Activity & Audit Trail"
-        description="Every action in KURUHU is permanently logged with actor, time, and context. This trail is searchable and tamper-evident."
+        description="Every action in CRIME INTEL is permanently logged with actor, time, and context. This trail is searchable and tamper-evident."
       />
 
       <div className="flex flex-wrap items-center gap-2 rounded-xl border border-line bg-surface p-3 shadow-sm">

@@ -10,7 +10,7 @@ export type HistoryItem = { id: string; title: string; is_pinned: boolean; creat
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? '/backend-api'
 const MOCK_API = process.env.NEXT_PUBLIC_MOCK_API === 'true'
 const mockRows = [
-  { district_name: 'Bengaluru Urban', fir_count: 1284 },
+  { district_name: 'Chennai', fir_count: 1284 },
   { district_name: 'Mysuru', fir_count: 742 },
   { district_name: 'Belagavi', fir_count: 618 },
   { district_name: 'Dakshina Kannada', fir_count: 536 },
@@ -18,7 +18,7 @@ const mockRows = [
 ]
 const mockResult = (question: string, conversationId = 'mock-investigation-001'): AiResult => ({
   id: 'mock-query-001', conversation_id: conversationId, question,
-  answer: 'The preview dataset shows Bengaluru Urban with the highest FIR volume (1,284), followed by Mysuru (742). This is mock design-review data and was not queried from the police database.',
+  answer: 'The preview dataset shows Chennai with the highest FIR volume (1,284), followed by Mysuru (742). This is mock design-review data and was not queried from the police database.',
   sql: 'SELECT district_name, COUNT(*) AS fir_count FROM firs GROUP BY district_name ORDER BY fir_count DESC LIMIT 5;',
   parameters: {}, tables: ['firs', 'districts'], columns: ['district_name', 'fir_count'], filters: [],
   row_count: mockRows.length, execution_ms: 84, rows: mockRows, fir_references: [], stations: [],

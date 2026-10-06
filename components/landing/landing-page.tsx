@@ -67,10 +67,10 @@ const SECURITY = [
 ]
 
 const FAQS = [
-  { q: 'Does the AI decide anything on its own?', a: 'No. KURUHU is verification-first by design. AI output is an assistive brief with confidence scores and source citations. Nothing becomes part of the case record until an authorised officer verifies it against sources.' },
+  { q: 'Does the AI decide anything on its own?', a: 'No. CRIME INTEL is verification-first by design. AI output is an assistive brief with confidence scores and source citations. Nothing becomes part of the case record until an authorised officer verifies it against sources.' },
   { q: 'Can AI findings be used as evidence?', a: 'No. AI findings are investigative leads, never evidence. Every finding carries a persistent notice and must be traced back to admissible source records by an officer.' },
-  { q: 'Who can access KURUHU?', a: 'Only authorised law-enforcement personnel with verified identities. Access is role-based, district-scoped, and every session is monitored and logged.' },
-  { q: 'How does KURUHU find hidden relationships?', a: 'It correlates structured fields across records — phone numbers, vehicles, addresses, financial references, and co-occurrence in case files — and presents matches with the underlying records for review.' },
+  { q: 'Who can access CRIME INTEL?', a: 'Only authorised law-enforcement personnel with verified identities. Access is role-based, district-scoped, and every session is monitored and logged.' },
+  { q: 'How does CRIME INTEL find hidden relationships?', a: 'It correlates structured fields across records — phone numbers, vehicles, addresses, financial references, and co-occurrence in case files — and presents matches with the underlying records for review.' },
   { q: 'Is legacy case data supported?', a: 'Yes. Existing FIR datasets can be migrated through a validated ETL pipeline with provenance tracking and rejection handling for malformed records.' },
 ]
 
@@ -163,7 +163,7 @@ export function LandingPage() {
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/ksp-logo-official.png" alt="Karnataka State Police" width={38} height={42} className="object-contain" />
-            <span className="font-display text-sm font-bold tracking-[0.22em] text-navy">KURUHU</span>
+            <span className="font-display text-sm font-bold tracking-[0.22em] text-navy">CRIME INTEL</span>
           </Link>
           <nav className="hidden items-center gap-7 md:flex" aria-label="Landing navigation">
             {NAV_LINKS.map(l => (
@@ -213,7 +213,7 @@ export function LandingPage() {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">
-              KURUHU transforms fragmented case records into connected intelligence — FIRs, people, evidence, and
+              CRIME INTEL transforms fragmented case records into connected intelligence — FIRs, people, evidence, and
               relationships in one verified operational environment.
             </p>
           </Reveal>
@@ -242,7 +242,7 @@ export function LandingPage() {
           {/* Hero screenshot with scroll parallax */}
           <div className="relative mx-auto mt-16 max-w-5xl" style={{ perspective: 1200 }}>
             <motion.div style={reduce ? undefined : { rotateX: shotRotate, y: shotY, transformStyle: 'preserve-3d' }}>
-              <BrowserFrame src="/screens/dashboard.webp" alt="KURUHU Command Centre — live operational dashboard" priority glow="lg" />
+              <BrowserFrame src="/screens/dashboard.webp" alt="CRIME INTEL Command Centre — live operational dashboard" priority glow="lg" />
             </motion.div>
             {/* floating chips */}
             <div className="animate-float-slow absolute -left-6 top-24 hidden rounded-xl border border-line bg-white px-4 py-3 shadow-xl lg:block" aria-hidden>
@@ -314,7 +314,7 @@ export function LandingPage() {
                   {i === 2 && <div className="mt-7"><TypingDemo /></div>}
                 </Reveal>
                 <Reveal delay={0.12} className="lg:col-span-7 lg:[direction:ltr]">
-                  <BrowserFrame src={t.img} alt={`${t.eyebrow} — KURUHU`} url={t.url} glow="md" className="transition-transform duration-500 hover:scale-[1.015]" />
+                  <BrowserFrame src={t.img} alt={`${t.eyebrow} — CRIME INTEL`} url={t.url} glow="md" className="transition-transform duration-500 hover:scale-[1.015]" />
                 </Reveal>
               </div>
             ))}
@@ -404,7 +404,7 @@ export function LandingPage() {
       <section id="how-it-works" className="py-28">
         <div className="mx-auto max-w-6xl px-5">
           <Reveal className="text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-teal-600">How KURUHU works</p>
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-teal-600">How CRIME INTEL works</p>
             <h2 className="mx-auto mt-3 max-w-xl font-display text-3xl font-bold tracking-tight text-navy md:text-4xl">Report to resolution, fully audited</h2>
           </Reveal>
           <div className="relative mt-16">
@@ -439,7 +439,7 @@ export function LandingPage() {
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-teal-600">The institution</p>
             <h2 className="mt-3 max-w-xl font-display text-3xl font-bold tracking-tight text-navy md:text-4xl">Built with the force, for the force</h2>
             <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-slate-600">
-              KURUHU is shaped by the officers who use it — from station house intake to command-level review —
+              CRIME INTEL is shaped by the officers who use it — from station house intake to command-level review —
               under the mandate of the Karnataka State Police, State Crime Records Bureau.
             </p>
           </Reveal>
@@ -501,7 +501,7 @@ export function LandingPage() {
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-teal-600">Security & governance</p>
               <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-navy md:text-4xl">Built for institutional trust</h2>
               <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-slate-600">
-                An intelligence platform for law enforcement has to be beyond question. KURUHU treats auditability
+                An intelligence platform for law enforcement has to be beyond question. CRIME INTEL treats auditability
                 and access control as product features, not afterthoughts.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -579,7 +579,7 @@ export function LandingPage() {
               <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-slate-400">Authorised officers can sign in with their registered mobile number and district.</p>
               {!user ? (
                 <Link href="/auth/" className="group mt-8 inline-flex items-center gap-2 rounded-lg bg-cyan px-8 py-3.5 text-sm font-bold text-navy shadow-lg shadow-cyan/25 transition-all hover:-translate-y-0.5 hover:bg-teal-300">
-                  Sign in to KURUHU <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                  Sign in to CRIME INTEL <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
                 </Link>
               ) : (
                 <Link href="/workspace/" className="group mt-8 inline-flex items-center gap-2 rounded-lg bg-cyan px-8 py-3.5 text-sm font-bold text-navy shadow-lg shadow-cyan/25 transition-all hover:-translate-y-0.5 hover:bg-teal-300">
@@ -596,7 +596,7 @@ export function LandingPage() {
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5">
           <div className="flex items-center gap-3">
             <Image src="/ksp-logo-official.png" alt="" width={34} height={38} className="object-contain" />
-            <span className="text-xs text-slate-500">KURUHU · Karnataka State Police — State Crime Records Bureau</span>
+            <span className="text-xs text-slate-500">CRIME INTEL · Karnataka State Police — State Crime Records Bureau</span>
           </div>
           <nav className="flex items-center gap-5" aria-label="Legal">
             <Link href="/support/" className="text-xs text-slate-500 transition-colors hover:text-navy">Support</Link>

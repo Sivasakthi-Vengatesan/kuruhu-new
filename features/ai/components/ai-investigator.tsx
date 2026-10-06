@@ -42,14 +42,14 @@ import { cn } from '@/lib/utils'
 import { useLanguage } from '@/components/providers/language-provider'
 
 const SUGGESTIONS_EN = [
-  'Show repeat offenders linked to theft cases in Bengaluru South',
+  'Show repeat offenders linked to theft cases in Chennai South',
   'Are the Jayanagar burglary and bank fraud cases connected?',
   'Does vehicle KA-05-NB-8821 appear in other open cases?',
   'What is the peak crime window for Madiwala Market?',
 ]
 
 const SUGGESTIONS_KN = [
-  'ಬೆಂಗಳೂರು ದಕ್ಷಿಣದ ಮರುಕಳಿಸುವ ಅಪರಾಧಿಗಳ ಪಟ್ಟಿ ತೋರಿಸಿ',
+  'ಚೆನ್ನೈ ದಕ್ಷಿಣದ ಮರುಕಳಿಸುವ ಅಪರಾಧಿಗಳ ಪಟ್ಟಿ ತೋರಿಸಿ',
   'ಜಯನಗರ ಕಳ್ಳತನ ಮತ್ತು ಬ್ಯಾಂಕ್ ವಂಚನೆ ಪ್ರಕರಣಗಳು ಸಂಪರ್ಕಿತವಾಗಿವೆಯೇ?',
   'ವಾಹನ KA-05-NB-8821 ಇತರ ತೆರೆದ ಪ್ರಕರಣಗಳಲ್ಲಿ ಕಂಡುಬಂದಿದೆಯೇ?',
   'ಮಡಿವಾಳ ಮಾರುಕಟ್ಟೆಯ ಗರಿಷ್ಠ ಅಪರಾಧ ಸಮಯ ಯಾವುದು?',

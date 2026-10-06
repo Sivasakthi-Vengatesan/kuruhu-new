@@ -33,7 +33,7 @@ export function RouteLoadingScreen({
           />
         </div>
 
-        <p className="mt-6 text-sm font-bold tracking-[0.22em] text-white">KURUHU</p>
+        <p className="mt-6 text-sm font-bold tracking-[0.22em] text-white">CRIME INTEL</p>
         <p className="mt-2 text-xs font-medium text-slate-400">{message}</p>
 
         <div className="mx-auto mt-5 h-1 w-40 overflow-hidden rounded-full bg-white/10">

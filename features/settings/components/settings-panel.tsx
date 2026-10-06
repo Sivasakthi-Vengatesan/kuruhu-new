@@ -49,7 +49,7 @@ export function SettingsPanel() {
   const userRole = user?.role === 'admin' ? 'System Administrator' : user?.role === 'civilian' ? 'Citizen' : 'Investigating Officer'
   const badge = user?.badge_number || 'KSP-30412'
   const station = user?.station || 'Jayanagar PS'
-  const district = user?.district || 'Bengaluru (Urban)'
+  const district = user?.district || 'Chennai'
 
   const initials = displayName
     .split(' ')
@@ -109,7 +109,7 @@ export function SettingsPanel() {
               <>
                 <h2 className="text-lg font-bold text-ink">{t('settings.langTitle', 'Dashboard Platform Language')}</h2>
                 <p className="mt-1 text-xs text-ink-muted">
-                  {t('settings.langDesc', 'Toggle the entire KURUHU PRAMAAN workspace interface between English and Kannada.')}
+                  {t('settings.langDesc', 'Toggle the entire CRIME INTEL workspace interface between English and Kannada.')}
                 </p>
 
                 <div className="mt-6 grid grid-cols-2 gap-4">
@@ -181,7 +181,7 @@ export function SettingsPanel() {
                   <li className="flex items-center gap-3 rounded-lg border border-line bg-canvas p-4">
                     <Laptop className="size-5 text-slate-500" aria-hidden />
                     <div className="min-w-0 flex-1">
-                      <p className="text-sm font-semibold text-ink">Active PRAMAAN Web Session</p>
+                      <p className="text-sm font-semibold text-ink">Active CRIME INTEL Web Session</p>
                       <p className="text-xs text-ink-muted">{district} · Active Now</p>
                     </div>
                     <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 ring-1 ring-inset ring-emerald-200">Current</span>

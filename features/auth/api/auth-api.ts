@@ -75,7 +75,7 @@ export function buildDefaultUser(payload: {
     roles: [role],
     permissions: permissionsMap[role] || permissionsMap.officer,
     display_name: formattedName,
-    district: payload.district || 'Bengaluru (Urban)',
+    district: payload.district || 'Chennai',
     badge_number: role === 'officer' ? 'KSP-30412' : role === 'admin' ? 'ADM-001' : 'CIV-8841',
     station: role === 'civilian' ? 'Public Portal' : role === 'admin' ? 'SCRB Headquarters' : 'Jayanagar PS',
   }

@@ -75,7 +75,7 @@ Edit `app/globals.css`:
 Edit `components/login-form.tsx`:
 ```typescript
 const districts = [
-  'Bengaluru (Urban)',
+  'Chennai',
   'Your District',  // Add here
   // ...
 ]

@@ -77,7 +77,7 @@ export function AuthFlow() {
         </div>
         <Link href="/" className="relative flex items-center gap-3">
           <Image src="/ksp-emblem.png" alt="Karnataka State Police" width={34} height={41} className="object-contain" />
-          <span className="text-sm font-bold tracking-[0.22em] text-white">KURUHU</span>
+          <span className="text-sm font-bold tracking-[0.22em] text-white">CRIME INTEL</span>
         </Link>
         <div className="relative">
           <h1 className="text-3xl leading-tight font-bold text-white">Verified access to connected investigations.</h1>
@@ -257,7 +257,7 @@ export function AuthFlow() {
               <h2 id="step-language" className="text-ink mt-5 text-2xl font-bold tracking-tight">
                 Choose your language
               </h2>
-              <p className="text-ink-muted mt-1.5 text-sm">KURUHU will use this language across the workspace.</p>
+              <p className="text-ink-muted mt-1.5 text-sm">CRIME INTEL will use this language across the workspace.</p>
               <div className="mt-7 grid gap-2.5" role="radiogroup" aria-label="Language">
                 {LANGUAGES.map((l) => (
                   <button
@@ -290,7 +290,7 @@ export function AuthFlow() {
                 Terms of authorised use
               </h2>
               <div className="border-line mt-6 max-h-52 scrollbar-thin space-y-3 overflow-y-auto rounded-lg border bg-white p-4 text-[13px] leading-relaxed text-slate-600">
-                <p>KURUHU is restricted to authorised law-enforcement personnel. By continuing you acknowledge that:</p>
+                <p>CRIME INTEL is restricted to authorised law-enforcement personnel. By continuing you acknowledge that:</p>
                 <p>
                   1. All activity in this system — searches, record views, edits, links, and verifications — is logged
                   to a permanent audit trail attributed to your identity.

@@ -1,5 +1,5 @@
 /**
- * KURUHU demo intelligence dataset.
+ * CRIME INTEL demo intelligence dataset.
  * Deterministic mock data used by every workspace screen until the
  * FastAPI domain services are wired in. All records are fictional.
  */
@@ -126,14 +126,14 @@ export const CURRENT_OFFICER = {
   rank: 'Inspector',
   badge: 'KSP-30412',
   station: 'Jayanagar PS',
-  district: 'Bengaluru City',
+  district: 'Chennai',
   role: 'Investigating Officer',
 }
 
 export const PERSONS: Person[] = [
   {
     id: 'P-1001', name: 'Ravi Kumar S', aliases: ['Ravi Anna', 'RK'], age: 34, gender: 'M', role: 'accused', risk: 'high',
-    phone: '+91 98xx xx4821', address: 'BTM Layout 2nd Stage, Bengaluru', identifier: 'AAD-XXXX-8821',
+    phone: '+91 98xx xx4821', address: 'BTM Layout 2nd Stage, Chennai', identifier: 'AAD-XXXX-8821',
     firIds: ['F-2401', 'F-2388', 'F-2296'], knownLocations: ['BTM Layout', 'Madiwala Market', 'Hosur Road'],
     socioDemographics: {
       occupation: 'Unemployed (Former Auto Driver)',
@@ -158,13 +158,13 @@ export const PERSONS: Person[] = [
   },
   {
     id: 'P-1002', name: 'Faisal Ahmed', aliases: ['Chotu'], age: 27, gender: 'M', role: 'suspect', risk: 'high',
-    phone: '+91 97xx xx1174', address: 'Shivajinagar, Bengaluru', identifier: 'DL-KA01-XX7742',
+    phone: '+91 97xx xx1174', address: 'Shivajinagar, Chennai', identifier: 'DL-KA01-XX7742',
     firIds: ['F-2401', 'F-2367'], knownLocations: ['Shivajinagar', 'KR Market'],
     socioDemographics: {
       occupation: 'Scrap Dealer Assistant',
       educationLevel: 'Higher Secondary (PUC)',
       incomeBracket: 'Low Income (< ₹2L/year)',
-      originDistrict: 'Bengaluru Urban',
+      originDistrict: 'Chennai',
       familyLinksCount: 4,
       economicRiskFactor: 'High',
     },
@@ -183,40 +183,40 @@ export const PERSONS: Person[] = [
   },
   {
     id: 'P-1003', name: 'Manju Nayak', aliases: ['Manja'], age: 41, gender: 'M', role: 'suspect', risk: 'medium',
-    phone: '+91 96xx xx9080', address: 'Yeshwanthpur, Bengaluru', identifier: 'AAD-XXXX-1290',
+    phone: '+91 96xx xx9080', address: 'Yeshwanthpur, Chennai', identifier: 'AAD-XXXX-1290',
     firIds: ['F-2367', 'F-2296'], knownLocations: ['Yeshwanthpur', 'Peenya Industrial Area'],
     relationships: [{ personId: 'P-1002', label: 'Seen together (CCTV)', firId: 'F-2367', verified: true }],
     lastActivity: '2026-07-19T22:05:00+05:30',
   },
   {
     id: 'P-1004', name: 'Lakshmi Devi', aliases: [], age: 52, gender: 'F', role: 'complainant', risk: 'low',
-    phone: '+91 99xx xx3356', address: 'Jayanagar 4th Block, Bengaluru', identifier: 'AAD-XXXX-5567',
+    phone: '+91 99xx xx3356', address: 'Jayanagar 4th Block, Chennai', identifier: 'AAD-XXXX-5567',
     firIds: ['F-2401'], knownLocations: ['Jayanagar'],
     relationships: [{ personId: 'P-1001', label: 'Reported against', firId: 'F-2401', verified: true }],
     lastActivity: '2026-07-18T11:30:00+05:30',
   },
   {
     id: 'P-1005', name: 'Arjun Shetty', aliases: ['AJ'], age: 29, gender: 'M', role: 'witness', risk: 'low',
-    phone: '+91 98xx xx7714', address: 'Koramangala 5th Block, Bengaluru', identifier: 'PAN-XXXXX331K',
+    phone: '+91 98xx xx7714', address: 'Koramangala 5th Block, Chennai', identifier: 'PAN-XXXXX331K',
     firIds: ['F-2388'], knownLocations: ['Koramangala'],
     relationships: [], lastActivity: '2026-07-20T16:00:00+05:30',
   },
   {
     id: 'P-1006', name: 'Sunitha Rao', aliases: [], age: 36, gender: 'F', role: 'victim', risk: 'low',
-    phone: '+91 95xx xx2210', address: 'Malleshwaram, Bengaluru', identifier: 'AAD-XXXX-9034',
+    phone: '+91 95xx xx2210', address: 'Malleshwaram, Chennai', identifier: 'AAD-XXXX-9034',
     firIds: ['F-2367'], knownLocations: ['Malleshwaram'],
     relationships: [], lastActivity: '2026-07-17T14:20:00+05:30',
   },
   {
     id: 'P-1007', name: 'Imran Pasha', aliases: ['Bhai'], age: 45, gender: 'M', role: 'accused', risk: 'high',
-    phone: '+91 90xx xx6645', address: 'Frazer Town, Bengaluru', identifier: 'DL-KA03-XX2210',
+    phone: '+91 90xx xx6645', address: 'Frazer Town, Chennai', identifier: 'DL-KA03-XX2210',
     firIds: ['F-2296', 'F-2244'], knownLocations: ['Frazer Town', 'Shivajinagar', 'Hosur Road'],
     relationships: [{ personId: 'P-1001', label: 'Financial link (transfers)', firId: 'F-2296', verified: false }],
     lastActivity: '2026-07-22T20:45:00+05:30',
   },
   {
     id: 'P-1008', name: 'Deepa Hegde', aliases: [], age: 31, gender: 'F', role: 'complainant', risk: 'low',
-    phone: '+91 91xx xx8890', address: 'Indiranagar, Bengaluru', identifier: 'AAD-XXXX-4412',
+    phone: '+91 91xx xx8890', address: 'Indiranagar, Chennai', identifier: 'AAD-XXXX-4412',
     firIds: ['F-2388'], knownLocations: ['Indiranagar'],
     relationships: [], lastActivity: '2026-07-21T10:05:00+05:30',
   },
@@ -229,11 +229,11 @@ export const VEHICLES: Vehicle[] = [
 ]
 
 export const LOCATIONS: LocationRec[] = [
-  { id: 'L-301', name: 'Jayanagar 4th Block Market', area: 'Jayanagar', district: 'Bengaluru City', firIds: ['F-2401'] },
-  { id: 'L-302', name: 'Madiwala Market Junction', area: 'Madiwala', district: 'Bengaluru City', firIds: ['F-2401', 'F-2388'] },
-  { id: 'L-303', name: 'KR Market West Gate', area: 'KR Market', district: 'Bengaluru City', firIds: ['F-2367'] },
-  { id: 'L-304', name: 'Peenya Industrial Area Ph-2', area: 'Peenya', district: 'Bengaluru City', firIds: ['F-2296'] },
-  { id: 'L-305', name: 'Hosur Road Toll Plaza', area: 'Electronic City', district: 'Bengaluru City', firIds: ['F-2296', 'F-2244'] },
+  { id: 'L-301', name: 'Jayanagar 4th Block Market', area: 'Jayanagar', district: 'Chennai', firIds: ['F-2401'] },
+  { id: 'L-302', name: 'Madiwala Market Junction', area: 'Madiwala', district: 'Chennai', firIds: ['F-2401', 'F-2388'] },
+  { id: 'L-303', name: 'KR Market West Gate', area: 'KR Market', district: 'Chennai', firIds: ['F-2367'] },
+  { id: 'L-304', name: 'Peenya Industrial Area Ph-2', area: 'Peenya', district: 'Chennai', firIds: ['F-2296'] },
+  { id: 'L-305', name: 'Hosur Road Toll Plaza', area: 'Electronic City', district: 'Chennai', firIds: ['F-2296', 'F-2244'] },
 ]
 
 export const EVIDENCE: EvidenceItem[] = [
@@ -251,7 +251,7 @@ export const FIRS: Fir[] = [
   {
     id: 'F-2401', number: '0245/2026', title: 'Chain snatching and assault — Jayanagar market',
     summary: 'Complainant reports gold chain snatching by two persons on a black motorcycle near Jayanagar 4th Block Market. Minor injuries sustained. CCTV coverage available; two suspects identified through footage and CDR analysis.',
-    station: 'Jayanagar PS', district: 'Bengaluru City', officer: 'Insp. Meera Kulkarni', priority: 'high', status: 'investigating',
+    station: 'Jayanagar PS', district: 'Chennai', officer: 'Insp. Meera Kulkarni', priority: 'high', status: 'investigating',
     sections: ['BNS 304(2)', 'BNS 115(2)', 'BNS 351(3)'], registeredAt: '2026-07-15T19:20:00+05:30', updatedAt: '2026-07-22T18:10:00+05:30',
     personIds: ['P-1001', 'P-1002', 'P-1004'], evidenceIds: ['E-701', 'E-702', 'E-703', 'E-704'], vehicleIds: ['V-501'], locationIds: ['L-301', 'L-302'],
     relationshipCount: 6, aiFindingIds: ['AI-01', 'AI-03'],
@@ -266,7 +266,7 @@ export const FIRS: Fir[] = [
   {
     id: 'F-2388', number: '0232/2026', title: 'House burglary — Indiranagar residence',
     summary: 'Night-time break-in through rear window; jewellery and cash stolen. Fingerprint lifts under FSL analysis. Motorcycle matching V-501 seen on street CCTV at 01:40.',
-    station: 'Indiranagar PS', district: 'Bengaluru City', officer: 'PSI Divya R', priority: 'medium', status: 'investigating',
+    station: 'Indiranagar PS', district: 'Chennai', officer: 'PSI Divya R', priority: 'medium', status: 'investigating',
     sections: ['BNS 331(4)', 'BNS 305'], registeredAt: '2026-07-18T07:55:00+05:30', updatedAt: '2026-07-21T12:30:00+05:30',
     personIds: ['P-1001', 'P-1005', 'P-1008'], evidenceIds: ['E-705'], vehicleIds: ['V-501'], locationIds: ['L-302'],
     relationshipCount: 4, aiFindingIds: ['AI-02'],
@@ -279,7 +279,7 @@ export const FIRS: Fir[] = [
   {
     id: 'F-2367', number: '0219/2026', title: 'Vehicle theft ring — KR Market',
     summary: 'White Swift stolen from KR Market parking; third similar theft in the area in six weeks. CCTV shows two known suspects. Pattern analysis suggests organised activity.',
-    station: 'Halasuru Gate PS', district: 'Bengaluru City', officer: 'Insp. Ramesh Gowda', priority: 'high', status: 'review',
+    station: 'Halasuru Gate PS', district: 'Chennai', officer: 'Insp. Ramesh Gowda', priority: 'high', status: 'review',
     sections: ['BNS 303(2)', 'BNS 317(2)'], registeredAt: '2026-07-12T09:10:00+05:30', updatedAt: '2026-07-20T16:40:00+05:30',
     personIds: ['P-1002', 'P-1003', 'P-1006'], evidenceIds: ['E-706'], vehicleIds: ['V-502'], locationIds: ['L-303'],
     relationshipCount: 5, aiFindingIds: ['AI-04'],
@@ -292,7 +292,7 @@ export const FIRS: Fir[] = [
   {
     id: 'F-2296', number: '0148/2026', title: 'Illegal money lending and extortion — Peenya',
     summary: 'Extortion complaint against organised lending racket operating from a Peenya godown. UPI trail links collections across three FIRs. Ledger seized; financial analysis in progress.',
-    station: 'Peenya PS', district: 'Bengaluru City', officer: 'Insp. Meera Kulkarni', priority: 'critical', status: 'investigating',
+    station: 'Peenya PS', district: 'Chennai', officer: 'Insp. Meera Kulkarni', priority: 'critical', status: 'investigating',
     sections: ['BNS 308(5)', 'BNS 351(2)', 'KMPL Act 9'], registeredAt: '2026-06-28T13:00:00+05:30', updatedAt: '2026-07-22T20:50:00+05:30',
     personIds: ['P-1001', 'P-1003', 'P-1007'], evidenceIds: ['E-707', 'E-708'], vehicleIds: ['V-503'], locationIds: ['L-304', 'L-305'],
     relationshipCount: 9, aiFindingIds: ['AI-01', 'AI-05'],
@@ -305,7 +305,7 @@ export const FIRS: Fir[] = [
   {
     id: 'F-2244', number: '0096/2026', title: 'Highway cargo pilferage — Hosur Road',
     summary: 'Repeated pilferage from parked cargo trucks near the toll plaza. One accused identified; case closed after charge sheet.',
-    station: 'Electronic City PS', district: 'Bengaluru City', officer: 'PSI Anand T', priority: 'low', status: 'closed',
+    station: 'Electronic City PS', district: 'Chennai', officer: 'PSI Anand T', priority: 'low', status: 'closed',
     sections: ['BNS 303(2)'], registeredAt: '2026-05-30T10:20:00+05:30', updatedAt: '2026-07-08T11:00:00+05:30',
     personIds: ['P-1007'], evidenceIds: [], vehicleIds: [], locationIds: ['L-305'],
     relationshipCount: 2, aiFindingIds: [],
@@ -317,7 +317,7 @@ export const FIRS: Fir[] = [
   {
     id: 'F-2410', number: '0251/2026', title: 'Mobile phone snatching — Majestic bus stand',
     summary: 'Phone snatched at platform 12 during evening rush. Complaint registered; awaiting CCTV pull from BMTC control room.',
-    station: 'Upparpet PS', district: 'Bengaluru City', officer: 'Insp. Ramesh Gowda', priority: 'medium', status: 'registered',
+    station: 'Upparpet PS', district: 'Chennai', officer: 'Insp. Ramesh Gowda', priority: 'medium', status: 'registered',
     sections: ['BNS 304(2)'], registeredAt: '2026-07-22T19:35:00+05:30', updatedAt: '2026-07-22T19:35:00+05:30',
     personIds: [], evidenceIds: [], vehicleIds: [], locationIds: [],
     relationshipCount: 0, aiFindingIds: [],
@@ -448,7 +448,7 @@ export function relativeTime(iso: string): string {
 }
 
 export const DISTRICTS = [
-  'Bagalkote', 'Ballari', 'Belagavi City', 'Bengaluru City', 'Bengaluru Rural', 'Bidar', 'Chamarajanagara', 'Chikkaballapura',
+  'Bagalkote', 'Ballari', 'Belagavi City', 'Chennai', 'Chennai (Rural)', 'Bidar', 'Chamarajanagara', 'Chikkaballapura',
   'Chikkamagaluru', 'Chitradurga', 'Dakshina Kannada', 'Davanagere', 'Dharwad', 'Gadag', 'Hassan', 'Haveri', 'Hubballi-Dharwad City',
   'Kalaburagi', 'Kodagu', 'Kolar', 'Koppal', 'Mandya', 'Mangaluru City', 'Mysuru City', 'Mysuru District', 'Raichur', 'Ramanagara',
   'Shivamogga', 'Tumakuru', 'Udupi', 'Uttara Kannada', 'Vijayapura', 'Yadgiri',
@@ -503,7 +503,7 @@ export type CrimeHotspot = {
 export const CRIME_HOTSPOTS: CrimeHotspot[] = [
   {
     id: 'HS-01',
-    district: 'Bengaluru City',
+    district: 'Chennai',
     locationName: 'Madiwala Market & Hosur Road Junction',
     lat: 12.9226,
     lng: 77.6174,
@@ -515,7 +515,7 @@ export const CRIME_HOTSPOTS: CrimeHotspot[] = [
   },
   {
     id: 'HS-02',
-    district: 'Bengaluru City',
+    district: 'Chennai',
     locationName: 'KR Market & Cottonpet Main Road',
     lat: 12.9657,
     lng: 77.5762,
@@ -578,8 +578,8 @@ export const PREDICTIVE_EARLY_WARNINGS: PredictiveEarlyWarning[] = [
   {
     id: 'EW-901',
     title: 'Inter-district Two-Wheeler Theft Syndicate Active',
-    description: 'AI Modus Operandi matcher detected identical master-key lock picking patterns in Bengaluru South & Mandya. High probability of cross-border fencing near Hosur border.',
-    district: 'Bengaluru City / Mandya',
+    description: 'AI Modus Operandi matcher detected identical master-key lock picking patterns in Chennai South & Mandya. High probability of cross-border fencing near Hosur border.',
+    district: 'Chennai / Mandya',
     riskCategory: 'Syndicate Movement',
     confidence: 0.92,
     recommendedAction: 'Deploy midnight check-posts on NH-44 & alert Hosur Road police checkpoints.',
@@ -589,7 +589,7 @@ export const PREDICTIVE_EARLY_WARNINGS: PredictiveEarlyWarning[] = [
     id: 'EW-902',
     title: 'Repeat Offender Release Spike Warning',
     description: '3 high-recidivism offenders (P-1001 linked network) released on bail within last 7 days. Historical data indicates 78% re-offence window within 14 days of release.',
-    district: 'Bengaluru City',
+    district: 'Chennai',
     riskCategory: 'Recidivist Activity',
     confidence: 0.88,
     recommendedAction: 'Issue Section 107 BNSS / CrPC preventive surveillance notices to station IOs.',
@@ -599,7 +599,7 @@ export const PREDICTIVE_EARLY_WARNINGS: PredictiveEarlyWarning[] = [
     id: 'EW-903',
     title: 'Cyber OTP/UPI Impersonation Campaign Alert',
     description: 'Socio-demographic behavioral model flagged 18 complaints targeting senior citizens in Malleshwaram & Jayanagar via spoofed KSEB electricity bill SMS links.',
-    district: 'Bengaluru City',
+    district: 'Chennai',
     riskCategory: 'Cyber Spike',
     confidence: 0.95,
     recommendedAction: 'Broadcast public awareness alert via 1930 Cyber helpline & freeze identified mule accounts.',
@@ -622,7 +622,7 @@ export const PROACTIVE_PATROL_ROUTES: ProactivePatrolRoute[] = [
   {
     id: 'PR-101',
     routeName: 'Alpha Sector Midnight Patrol (BTM-Madiwala Belt)',
-    district: 'Bengaluru City',
+    district: 'Chennai',
     assignedStation: 'Jayanagar PS & Madiwala PS',
     targetHotspots: ['Madiwala Market', 'Hosur Road Junction', 'BTM 2nd Stage'],
     optimalTimeWindow: '01:00 AM – 05:00 AM',
@@ -632,7 +632,7 @@ export const PROACTIVE_PATROL_ROUTES: ProactivePatrolRoute[] = [
   {
     id: 'PR-102',
     routeName: 'Bravo Commercial Corridor Patrol (KR Market - Cottonpet)',
-    district: 'Bengaluru City',
+    district: 'Chennai',
     assignedStation: 'City Market PS',
     targetHotspots: ['KR Market West Gate', 'Cottonpet Main Road'],
     optimalTimeWindow: '05:00 PM – 10:00 PM',
@@ -642,7 +642,7 @@ export const PROACTIVE_PATROL_ROUTES: ProactivePatrolRoute[] = [
   {
     id: 'PR-103',
     routeName: 'Charlie Cyber & Financial Vulnerability Grid',
-    district: 'Bengaluru City',
+    district: 'Chennai',
     assignedStation: 'Cyber Crime Police Station',
     targetHotspots: ['Malleshwaram Banking Corridor', 'Indiranagar Tech Parks'],
     optimalTimeWindow: '10:00 AM – 04:00 PM',
@@ -668,7 +668,7 @@ export const CRIME_PATTERNS: CrimePatternCluster[] = [
     id: 'CP-01',
     patternName: 'Organized Midnight Two-Wheeler Theft Network',
     category: 'Property Crime',
-    affectedDistricts: ['Bengaluru City', 'Mandya', 'Ramanagara'],
+    affectedDistricts: ['Chennai', 'Mandya', 'Ramanagara'],
     firCount: 14,
     suspectsIdentified: 5,
     moSignature: 'Master key lock picking; target vehicle parked in dark residential lanes between 02:00 and 04:30 AM.',
@@ -679,7 +679,7 @@ export const CRIME_PATTERNS: CrimePatternCluster[] = [
     id: 'CP-02',
     patternName: 'Elderly Utility Bill Impersonation Cyber Fraud',
     category: 'Cyber Financial Crime',
-    affectedDistricts: ['Bengaluru City', 'Mysuru City', 'Belagavi City'],
+    affectedDistricts: ['Chennai', 'Mysuru City', 'Belagavi City'],
     firCount: 23,
     suspectsIdentified: 4,
     moSignature: 'Spoofed SMS warning power disconnection; remote screen control app installation via APK link.',
