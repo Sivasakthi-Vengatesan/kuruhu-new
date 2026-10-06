@@ -1,4 +1,4 @@
-import { supabase } from '@/lib/supabase'
+import { apiClient } from '@/lib/api/client'
 
 export type UserRole = 'admin' | 'officer' | 'civilian'
 
@@ -19,6 +19,7 @@ export type AuthUser = {
 }
 
 const LOCAL_STORAGE_USER_KEY = 'kuruhu.active-user'
+const LOCAL_STORAGE_TOKEN_KEY = 'pramaan_jwt_token'
 
 export function getStoredUser(): AuthUser | null {
   if (typeof window === 'undefined') return null
@@ -29,12 +30,16 @@ export function getStoredUser(): AuthUser | null {
   return null
 }
 
-export function setStoredUser(user: AuthUser | null): void {
+export function setStoredUser(user: AuthUser | null, token?: string): void {
   if (typeof window === 'undefined') return
   if (user) {
     window.localStorage.setItem(LOCAL_STORAGE_USER_KEY, JSON.stringify(user))
+    if (token) {
+      window.localStorage.setItem(LOCAL_STORAGE_TOKEN_KEY, token)
+    }
   } else {
     window.localStorage.removeItem(LOCAL_STORAGE_USER_KEY)
+    window.localStorage.removeItem(LOCAL_STORAGE_TOKEN_KEY)
   }
 }
 
@@ -83,28 +88,35 @@ export const authApi = {
   async signup(payload: { email: string; password: string; district: string; language: string; role?: UserRole; name?: string }) {
     const displayName = payload.name || payload.email.split('@')[0]
     try {
-      const { data, error } = await supabase.auth.signUp({
-        email: payload.email.trim().toLowerCase(),
+      const res = await apiClient.auth.signup({
+        email: payload.email,
         password: payload.password,
-        options: {
-          data: {
-            district: payload.district,
-            language: payload.language,
-            display_name: displayName,
-            role: payload.role || 'officer',
-          },
-        },
+        name: displayName,
+        district: payload.district,
+        role: payload.role || 'officer',
       })
-      if (!error && data.user) {
-        const u = buildDefaultUser({
-          identifier: payload.email,
-          role: payload.role || 'officer',
-          district: payload.district,
-          displayName,
-        })
+      if (res && res.user) {
+        const u: AuthUser = {
+          id: res.user.id,
+          login_identifier: res.user.loginIdentifier,
+          mobile_number: res.user.mobileNumber,
+          psn: res.user.psn,
+          is_active: res.user.isActive,
+          last_login_at: res.user.lastLoginAt,
+          role: res.user.role as UserRole,
+          roles: res.user.roles || [res.user.role],
+          permissions: res.user.permissions || [],
+          display_name: res.user.displayName,
+          district: res.user.district,
+          badge_number: res.user.badgeNumber,
+          station: res.user.station,
+        }
+        setStoredUser(u, res.token)
         return { user: u, requiresEmailVerification: false }
       }
-    } catch {}
+    } catch (e) {
+      console.warn('Backend signup call failed, falling back to local user:', e)
+    }
 
     const u = buildDefaultUser({
       identifier: payload.email,
@@ -117,7 +129,8 @@ export const authApi = {
 
   async requestOtp(identifier: string) {
     try {
-      await supabase.auth.signInWithOtp({ phone: identifier })
+      const res = await apiClient.auth.requestOtp(identifier)
+      if (res) return { message: res.message || 'OTP dispatched.', development_code: res.developmentCode || '123456' }
     } catch {}
     return { message: 'OTP has been dispatched.', development_code: '123456' }
   },
@@ -136,13 +149,34 @@ export const authApi = {
     if (payload.mode === 'civilian') userRole = 'civilian'
 
     try {
-      if (payload.identifier.includes('@')) {
-        await supabase.auth.signInWithPassword({
-          email: payload.identifier,
-          password: payload.credential || 'password',
-        })
+      const res = await apiClient.auth.login({
+        identifier: payload.identifier,
+        credential: payload.credential,
+        role: userRole,
+        district: payload.district,
+      })
+      if (res && res.user) {
+        const u: AuthUser = {
+          id: res.user.id,
+          login_identifier: res.user.loginIdentifier,
+          mobile_number: res.user.mobileNumber,
+          psn: res.user.psn,
+          is_active: res.user.isActive,
+          last_login_at: res.user.lastLoginAt,
+          role: res.user.role as UserRole,
+          roles: res.user.roles || [res.user.role],
+          permissions: res.user.permissions || [],
+          display_name: res.user.displayName,
+          district: res.user.district,
+          badge_number: res.user.badgeNumber,
+          station: res.user.station,
+        }
+        setStoredUser(u, res.token)
+        return u
       }
-    } catch {}
+    } catch (e) {
+      console.warn('Backend login call failed, falling back to default user:', e)
+    }
 
     return buildDefaultUser({
       identifier: payload.identifier,
@@ -157,12 +191,25 @@ export const authApi = {
     if (stored) return stored
 
     try {
-      const { data, error } = await supabase.auth.getUser()
-      if (!error && data?.user) {
-        return buildDefaultUser({
-          identifier: data.user.email || data.user.phone || data.user.id,
-          displayName: (data.user.user_metadata?.display_name as string) || undefined,
-        })
+      const res = await apiClient.auth.me()
+      if (res && res.id) {
+        const u: AuthUser = {
+          id: res.id,
+          login_identifier: res.loginIdentifier,
+          mobile_number: res.mobileNumber,
+          psn: res.psn,
+          is_active: res.isActive,
+          last_login_at: res.lastLoginAt,
+          role: res.role as UserRole,
+          roles: res.roles || [res.role],
+          permissions: res.permissions || [],
+          display_name: res.displayName,
+          district: res.district,
+          badge_number: res.badgeNumber,
+          station: res.station,
+        }
+        setStoredUser(u)
+        return u
       }
     } catch {}
 
@@ -170,9 +217,6 @@ export const authApi = {
   },
 
   async logout() {
-    try {
-      await supabase.auth.signOut()
-    } catch {}
     setStoredUser(null)
   },
 }

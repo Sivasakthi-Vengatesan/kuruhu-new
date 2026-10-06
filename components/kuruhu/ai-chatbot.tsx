@@ -174,14 +174,18 @@ export function AiChatbot() {
       window.speechSynthesis.speak(utterance)
     }
 
-    // Prefer the configured Catalyst function. Otherwise use the same-origin
-    // Next.js proxy so Slate deployments do not require cross-origin requests.
-    const ttsFunctionUrl = process.env.NEXT_PUBLIC_TTS_FUNCTION_URL?.trim() || '/api/tts/'
+    // Prefer Spring Boot Java TTS endpoint /api/v1/tts
+    const ttsFunctionUrl = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080') + '/api/v1/tts'
 
     setIsSpeaking(true)
     fetch(ttsFunctionUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        ...(typeof window !== 'undefined' && localStorage.getItem('pramaan_jwt_token')
+          ? { Authorization: `Bearer ${localStorage.getItem('pramaan_jwt_token')}` }
+          : {}),
+      },
       body: JSON.stringify({
         text: cleanText,
         language: zohoLang,
@@ -345,36 +349,38 @@ export function AiChatbot() {
       lang: lang === 'kn' ? 'Kannada' : 'English',
     }
 
-    // 1. Try Catalyst Function URL if configured
-    const chatFunctionUrl = process.env.NEXT_PUBLIC_CHAT_FUNCTION_URL || ''
-    if (chatFunctionUrl) {
-      try {
-        const res = await fetch(chatFunctionUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ messages: history, context: contextPayload }),
-        })
-        if (res.ok) {
-          const data = await res.json()
-          if (data.reply) {
-            setMessages(prev => [
-              ...prev,
-              {
-                id: Date.now().toString(),
-                role: 'assistant',
-                content: data.reply,
-                modelUsed: data.modelUsed || 'PRAMAAN AI (Groq LLaMA 3.3 70B)',
-                confidence: data.confidence || 0.98,
-                auditHash: data.auditHash || `AUDIT-GROQ-${Math.floor(100000 + Math.random() * 900000)}`,
-              },
-            ])
-            setLoading(false)
-            return
-          }
+    // 1. Primary: Call Java Spring Boot /api/v1/chat
+    try {
+      const apiUrl = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080') + '/api/v1/chat'
+      const token = typeof window !== 'undefined' ? localStorage.getItem('pramaan_jwt_token') : null
+      const res = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
+        body: JSON.stringify({ messages: history, context: contextPayload }),
+      })
+      if (res.ok) {
+        const data = await res.json()
+        if (data.reply) {
+          setMessages(prev => [
+            ...prev,
+            {
+              id: Date.now().toString(),
+              role: 'assistant',
+              content: data.reply,
+              modelUsed: data.modelUsed || 'PRAMAAN Spring Boot RAG Engine',
+              confidence: data.confidence || 0.98,
+              auditHash: data.auditHash || `AUDIT-SPRING-${Math.floor(100000 + Math.random() * 900000)}`,
+            },
+          ])
+          setLoading(false)
+          return
         }
-      } catch (err) {
-        console.warn('Catalyst chat function failed, falling back to /api/chat or direct Groq:', err)
       }
+    } catch (err) {
+      console.warn('Spring Boot /api/v1/chat call failed, falling back:', err)
     }
 
     // 2. Try Next.js server API route /api/chat (Groq Backend)
