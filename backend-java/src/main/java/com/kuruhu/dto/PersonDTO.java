@@ -1,0 +1,144 @@
+package com.kuruhu.dto;
+
+import java.io.Serializable;
+
+public class PersonDTO implements Serializable {
+
+    private String id;
+    private String name;
+    private java.util.List<String> aliases;
+    private int age;
+    private String gender;
+    private String role;
+    private String risk;
+    private String phone;
+    private String address;
+    private String identifier;
+    private java.util.List<String> firIds;
+    private String lastActivity;
+
+    public PersonDTO() {}
+
+    public PersonDTO(String id, String name, java.util.List<String> aliases, int age, String gender, String role, String risk, String phone, String address, String identifier, java.util.List<String> firIds, String lastActivity) {
+        this.id = id;
+        this.name = name;
+        this.aliases = aliases;
+        this.age = age;
+        this.gender = gender;
+        this.role = role;
+        this.risk = risk;
+        this.phone = phone;
+        this.address = address;
+        this.identifier = identifier;
+        this.firIds = firIds;
+        this.lastActivity = lastActivity;
+    }
+
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public java.util.List<String> getAliases() { return aliases; }
+    public void setAliases(java.util.List<String> aliases) { this.aliases = aliases; }
+
+    public int getAge() { return age; }
+    public void setAge(int age) { this.age = age; }
+
+    public String getGender() { return gender; }
+    public void setGender(String gender) { this.gender = gender; }
+
+    public String getRole() { return role; }
+    public void setRole(String role) { this.role = role; }
+
+    public String getRisk() { return risk; }
+    public void setRisk(String risk) { this.risk = risk; }
+
+    public String getPhone() { return phone; }
+    public void setPhone(String phone) { this.phone = phone; }
+
+    public String getAddress() { return address; }
+    public void setAddress(String address) { this.address = address; }
+
+    public String getIdentifier() { return identifier; }
+    public void setIdentifier(String identifier) { this.identifier = identifier; }
+
+    public java.util.List<String> getFirIds() { return firIds; }
+    public void setFirIds(java.util.List<String> firIds) { this.firIds = firIds; }
+
+    public String getLastActivity() { return lastActivity; }
+    public void setLastActivity(String lastActivity) { this.lastActivity = lastActivity; }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private String id;
+        private String name;
+        private java.util.List<String> aliases;
+        private int age;
+        private String gender;
+        private String role;
+        private String risk;
+        private String phone;
+        private String address;
+        private String identifier;
+        private java.util.List<String> firIds;
+        private String lastActivity;
+
+        public Builder id(String id) {
+            this.id = id;
+            return this;
+        }
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+        public Builder aliases(java.util.List<String> aliases) {
+            this.aliases = aliases;
+            return this;
+        }
+        public Builder age(int age) {
+            this.age = age;
+            return this;
+        }
+        public Builder gender(String gender) {
+            this.gender = gender;
+            return this;
+        }
+        public Builder role(String role) {
+            this.role = role;
+            return this;
+        }
+        public Builder risk(String risk) {
+            this.risk = risk;
+            return this;
+        }
+        public Builder phone(String phone) {
+            this.phone = phone;
+            return this;
+        }
+        public Builder address(String address) {
+            this.address = address;
+            return this;
+        }
+        public Builder identifier(String identifier) {
+            this.identifier = identifier;
+            return this;
+        }
+        public Builder firIds(java.util.List<String> firIds) {
+            this.firIds = firIds;
+            return this;
+        }
+        public Builder lastActivity(String lastActivity) {
+            this.lastActivity = lastActivity;
+            return this;
+        }
+
+        public PersonDTO build() {
+            return new PersonDTO(this.id, this.name, this.aliases, this.age, this.gender, this.role, this.risk, this.phone, this.address, this.identifier, this.firIds, this.lastActivity);
+        }
+    }
+}
