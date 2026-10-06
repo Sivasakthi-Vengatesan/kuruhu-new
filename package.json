@@ -2,6 +2,7 @@
   "name": "pramaan-frontend",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -51,5 +52,15 @@
   },
   "overrides": {
     "hono": "4.12.25"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@img/sharp-libvips-linuxmusl-x64",
+      "@next/swc-linux-x64-musl",
+      "@rolldown/binding-linux-x64-musl",
+      "msw",
+      "sharp",
+      "unrs-resolver"
+    ]
   }
 }
