@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: crime-intel
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: NODE_ENV
+        value: production
+      - key: BUILD_STANDALONE
+        value: "true"
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        sync: false
+      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+        sync: false
+      - key: NEXT_PUBLIC_GROQ_API_KEY
+        sync: false
